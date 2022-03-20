@@ -1,0 +1,48 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+void mona(char *x,char *y);
+void mona(char *str1,char *str2,int l);
+int main(){   
+char str1[20]="vademgunta",str2[20]="Saranya",str3[20]="RVR&JC",str4[40]="College Of Engineering";
+      mona(str1,str2);
+      cout<<str1<<endl;
+      mona(str3,str4,7);
+      cout<<str3<<endl;
+      return 0;
+}
+void mona(char *x,char *y)
+{
+      strcpy(x,y);
+}
+void mona(char *str1,char *str2,int l)
+{
+      strncpy(str1,str2,l);
+      cout<<"\n";
+}
+
+
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+void mona(char *x,char *y);
+void mona(char *str1,char *str2,int l);
+int main()
+{
+      char st1[10]="Are",st2[20]="Surekha",st3[20]="RVR&JC",st4[40]="College Of Engineering";
+      mona(st1,st2);
+      cout<<st1<<endl;
+      mona(st3,st4,7);
+      cout<<st3<<endl;
+      return 0;
+}
+void mona(char *x,char *y)
+{
+      strcat(x,y);
+}
+void mona(char *str1,char *str2,int l)
+{
+      strncat(str1,str2,l);
+      cout<<"\n";
+}
