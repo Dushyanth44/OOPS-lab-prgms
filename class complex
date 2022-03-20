@@ -1,0 +1,47 @@
+// Define class complex with all possible operations: constructor, destructor, copy 
+constructor, assignment operator with the data members stored as pointer to integers.//
+
+#include<iostream>
+using namespace std;
+class Complex
+{
+int *r,*im;
+public:
+Complex(int *a,int *b)
+{
+ r=a;
+im=b;
+}
+Complex()
+{
+	
+}
+Complex(Complex &c)
+{
+this->r=c.r;
+this->im=c.im;
+}
+~Complex()
+{
+	
+}
+void display()
+{
+cout<<"number is "<<*r<<"+"<<*im<<"i"<<endl;
+}
+};
+int main()
+{
+int a=3,b=6;
+Complex c1(&a,&b);
+int p=7,q=5;
+Complex c2(&p,&q);
+c1.display();
+c2.display();
+Complex c4(c1);
+c4.display();
+c2=c1;
+c2.display();
+return 0;
+}
+
